@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+double sumArr(int* arr, int size, int start){
+    if(start == size){
+        return 0;
+    }
+    return arr[start] + sumArr(arr,size , start + 1);
+}
+
+int main()
+{
+    int arr[] = {2.1,1.2,8.3,7.4,9.5};
+    printf("%f\n" ,sumArr(arr,5,0));
+    return 0;
+} 
